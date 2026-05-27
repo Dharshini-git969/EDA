@@ -1,136 +1,255 @@
-# CNN-Based Grayscale Image Colorization using Stable Diffusion
+# AI & Machine Learning Projects Portfolio
 
-## Project Overview
-This project focuses on automatic colorization of grayscale images using Convolutional Neural Networks (CNN) integrated with Stable Diffusion techniques. The main objective of the project is to transform black-and-white images into realistic and visually appealing colored images using deep learning models.
+This repository contains three machine learning and AI-based projects developed using Python, TensorFlow, Streamlit, and Stable Diffusion. These projects demonstrate practical implementations of Deep Learning, Computer Vision, Generative AI, and Data Analysis concepts.
 
-Image colorization is one of the important applications of Artificial Intelligence and Computer Vision. Manual colorization requires professional editing skills and consumes a lot of time. This project aims to automate the process by training deep learning models to predict accurate color information from grayscale images.
+# Project 1 – Image Colorization using CNN
 
-The model learns image features, textures, edges, and patterns from large datasets and generates realistic colors while preserving the original structure of the image.
+## 📖 Overview
+
+This project focuses on automatic image colorization using a Convolutional Neural Network (CNN).
+The model takes grayscale images as input and predicts realistic colorized versions using the LAB color space.
+
+The project uses:
+
+* TensorFlow/Keras
+* OpenCV
+* scikit-image
+* NumPy
+* Matplotlib
 
 
+## Objective
 
-## Objectives
-- Convert grayscale images into realistic colored images
-- Improve image quality using deep learning techniques
-- Learn feature extraction using CNN architectures
-- Generate visually accurate color predictions
-- Explore Stable Diffusion techniques for enhanced image generation
+To convert grayscale images into colorized images using Deep Learning techniques.
 
--
+
 ## Technologies Used
-- Python
-- TensorFlow / Keras
-- OpenCV
-- NumPy
-- Matplotlib
-- Google Colab
-- Stable Diffusion
-- CNN (Convolutional Neural Networks)
+
+* Python
+* TensorFlow / Keras
+* OpenCV
+* NumPy
+* Matplotlib
+* scikit-image
+
+## Model Architecture
+
+The CNN model consists of:
+
+* Encoder layers for feature extraction
+* MaxPooling layers for dimensionality reduction
+* Decoder layers with UpSampling
+* Final output layer predicting A & B color channels
+
+The model is trained using:
+
+* Mean Squared Error (MSE) Loss
+* Adam Optimizer
 
 
-## Dataset Used
-The project uses grayscale and colorful image pairs for training the model.
+## Dataset
 
-Dataset:
-- Image Colorization Dataset by aayush9753 from Kaggle
+Images used:
 
-The dataset contains:
-- Original colorful images
-- Corresponding grayscale images
+* nature.jpg
+* nature_3.jpg
+* nature_4.jpg
 
-These image pairs help the model learn color mapping and prediction.
+Images are:
 
+* Resized to 256×256
+* Converted from RGB to LAB color space
+* L channel used as input
+* AB channels used as target output
 
-## Methodology
+## Evaluation
 
-### 1. Data Preprocessing
-- Images are resized and normalized
-- Conversion between RGB and LAB color spaces
-- Extraction of L (Lightness) channel for grayscale input
-- AB color channels used as target output
+The model performance is evaluated using:
 
-### 2. CNN Model Architecture
-The Convolutional Neural Network is designed to:
-- Extract image features
-- Detect patterns and textures
-- Predict missing color channels
-- Generate realistic color outputs
-
-The network includes:
-- Convolution layers
-- Activation functions
-- Pooling layers
-- Upsampling layers
-
-### 3. Stable Diffusion Integration
-Stable Diffusion techniques are used to improve:
-- Image quality
-- Color smoothness
-- Realistic appearance
-- Fine image details
-
-This helps generate visually enhanced and natural-looking colored images.
-
-### 4. Model Training
-The model is trained on grayscale-color image pairs using:
-- Loss optimization
-- Backpropagation
-- Epoch-based learning
-
-The model gradually improves its color prediction accuracy during training.
-
----
+* Structural Similarity Index (SSIM)
 
 ## Features
-- Automatic grayscale image colorization
-- Deep learning-based image processing
-- Realistic color prediction
-- Enhanced output quality using Stable Diffusion
-- Visualization of input and output images
-- Image preprocessing and normalization
+
+* Automatic grayscale image colorization
+* LAB color space processing
+* CNN-based encoder-decoder architecture
+* Image visualization and saving
+* SSIM score calculation
+
+# Project 2 – AI Image Generator using Stable Diffusion
+
+## Overview
+
+This project is a Streamlit-based AI Image Generator powered by Stable Diffusion.
+Users can generate creative AI images from text prompts with different artistic styles.
 
 
-## Results
-The trained model successfully generates colored versions of grayscale images with visually realistic outputs. The project demonstrates the capability of CNNs and Stable Diffusion techniques in solving image restoration and enhancement problems.
+## Objective
 
-The generated outputs preserve:
-- Image structure
-- Object boundaries
-- Texture details
-- Natural color appearance
+To build an interactive Generative AI application capable of producing high-quality AI-generated artwork from text prompts.
 
 
+## Technologies Used
 
-## Applications
-- Restoration of old black-and-white photographs
-- Film and media restoration
-- Historical image enhancement
-- AI-based image editing
-- Computer vision research
+* Python
+* Streamlit
+* Hugging Face Diffusers
+* Stable Diffusion
+* PyTorch
+* Ngrok
+
+## Features
+
+* AI image generation from prompts
+* Multiple art styles
+* Surprise prompt generator
+* Fast Mode & Quality Mode
+* Recent image gallery
+* Image download support
+* Public deployment using Ngrok
+
+## Model Used
+
+* Stable Diffusion v1.4
+* Hugging Face Diffusers Pipeline
+
+## Functionalities
+
+### Prompt Styling
+
+Enhances prompts with artistic effects.
+
+### Style Selection
+
+Available styles include:
+
+* Hyper-realistic
+* Anime Style
+* Digital Painting
+* Cyberpunk
+* 3D Render
+
+### Prompt History
+
+Stores previously generated prompts.
+
+### Gallery Section
+
+Displays recently generated AI images.
 
 
+# Project 3 – Mental Health Dataset Analysis
 
-## Future Enhancements
-- Improve color accuracy using larger datasets
-- Use GAN-based architectures
-- Deploy as a web application
-- Real-time image colorization
-- Higher resolution image generation
+## Overview
+
+This project performs exploratory data analysis (EDA) on a Mental Health Dataset containing survey responses related to stress, treatment, habits, and mental health conditions.
+
+The analysis helps understand patterns and trends affecting mental health.
+
+## Objective
+
+To analyze mental health-related data and identify trends using Python data analysis libraries.
 
 
-## Learning Outcomes
-Through this project, I learned:
-- Deep learning fundamentals
-- CNN architecture design
-- Image preprocessing techniques
-- Computer vision concepts
-- Stable Diffusion integration
-- Model training and evaluation
-- TensorFlow and OpenCV implementation
+## Technologies Used
 
----
+* Python
+* Pandas
+* NumPy
 
-## Author
+
+## Dataset Information
+
+Dataset contains:
+
+* 292,364 rows
+* 17 columns
+
+Features include:
+
+* Gender
+* Country
+* Occupation
+* Family History
+* Treatment
+* Stress Levels
+* Mood Swings
+* Social Weakness
+* Work Interest
+* Mental Health Interview
+
+## Data Preprocessing
+
+Performed:
+
+* Null value detection
+* Missing value handling
+* Data cleaning
+* Column inspection
+* Statistical summary generation
+
+## Analysis Performed
+
+* Dataset shape inspection
+* Null value analysis
+* Feature exploration
+* Category analysis
+* Descriptive statistics
+* Data cleaning and preprocessing
+
+
+# Repository Structure
+
+```bash
+├── Image_Colorization_Project/
+├── AI_Image_Generator/
+├── Mental_Health_EDA/
+├── README.md
+```
+
+
+# Future Improvements
+
+## Image Colorization
+
+* Train on larger datasets
+* Add GAN-based colorization
+* Improve output quality
+
+## AI Image Generator
+
+* Add image-to-image generation
+* Add user authentication
+* Deploy on cloud platforms
+
+## Mental Health Analysis
+
+* Add visualizations
+* Build prediction models
+* Create dashboards using Streamlit
+
+# Conclusion
+
+These projects demonstrate practical applications of:
+
+* Deep Learning
+* Computer Vision
+* Generative AI
+* Data Analysis
+* Streamlit Web Applications
+
+They helped strengthen understanding of:
+
+* CNN architectures
+* Stable Diffusion pipelines
+* Dataset preprocessing
+* Model evaluation techniques
+* AI application deployment
+
+
+# Author
+
 Dharshini Rajasekaran
 
-GitHub: https://github.com/Dharshini-git969
+MSc Data Analytics Student
+passionate about AI, Machine Learning, and Data Science
